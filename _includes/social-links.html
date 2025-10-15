@@ -1,5 +1,19 @@
 <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
 <div class="social-links">
+    {% if site.f1 %}
+        <a class="link" data-title="muf1k.github.io/{{ site.f1 }}" href="https://muf1k.github.io/{{ site.f1 }}" target="_blank" rel="noopener" alt="anchor link for social media steam" aria-label="anchor link for social media steam">
+            <i class="fa-solid fa-car"></i>
+        </a>
+    {% endif %}
+
+<div class="social-links">
+    {% if site.steam %}
+        <a class="link" data-title="steamcommunity.com/{{ site.steam }}" href="https://steamcommunity.com/{{ site.steam }}" target="_blank" rel="noopener" alt="anchor link for social media steam" aria-label="anchor link for social media steam">
+            <i class="fa-brands fa-steam"></i>
+        </a>
+    {% endif %}
+
+<div class="social-links">
     {% if site.youtube %}
         <a class="link" data-title="youtube.com/{{ site.youtube }}" href="https://youtube.com/{{ site.youtube }}" target="_blank" rel="noopener" alt="anchor link for social media youtube" aria-label="anchor link for social media youtube">
             <i class="fa-brands fa-youtube"></i>
