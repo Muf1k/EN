@@ -1,16 +1,32 @@
 .social-links
+    display: flex
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    gap: clamp(6px, 1vw, 12px)
     > .link
-        margin: 0
-        text-decoration: none
-        position: relative
-        display: inline-block
-        height: 35px
-        width: 35px
-        color: $zeta
-
+        display: flex
+        align-items: center
+        justify-content: center
+        width: clamp(28px, 4vw, 36px)
+        height: clamp(28px, 4vw, 36px)
+        border-radius: 50%
+        flex: 0 0 auto
+        transition: transform 0.3s ease
         &:hover
-            > svg
-                color: $delta
+            animation: bounce 0.6s ease
+        > i
+            display: block
+            font-size: clamp(14px, 2.5vw, 18px)
+            line-height: 1
+            vertical-align: middle
 
-    > svg
-        transition: all ease-in-out .2s
+@keyframes bounce
+    0%, 100%
+        transform: translateY(0)
+    25%
+        transform: translateY(-8px)
+    50%
+        transform: translateY(-4px)
+    75%
+        transform: translateY(-6px)
